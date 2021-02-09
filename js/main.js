@@ -9,3 +9,19 @@ $photoUrl.addEventListener('input', function (event) {
     $imgHolder.getAttribute('src', event.target.value);
   }
 });
+
+var $form = document.querySelector('form');
+$form.addEventListener('submit', function (event) {
+  event.preventDefault();
+  var input = {
+    photoUrl: event.target.photoUrl.value,
+    title: event.target.title.value,
+    notes: event.target.notes.value
+  };
+  var i = 1;
+  input.nextEntryId = i++;
+
+  // console.log(input);
+  $form.reset();
+
+});
