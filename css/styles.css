@@ -16,10 +16,17 @@ h1 {
   letter-spacing: 1px;
 }
 
-.head-container {
+.nav-container {
   width: 900px;
   margin: 0 auto;
   padding: 0 1.5rem;
+}
+
+a {
+  color: white;
+  font-size: 14px;
+  text-decoration: none;
+  padding: 10px;
 }
 
 img {
