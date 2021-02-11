@@ -24,8 +24,11 @@ $form.addEventListener('submit', function (event) {
   data.nextEntryId++;
   data.entries.unshift(input);
   $imgHolder.setAttribute('src', 'images/placeholder-image-square.jpg');
+  var newEntry = createEntry(input);
+  $entriesList.prepend(newEntry);
+
   $form.reset();
-  window.location.reload();
+
 });
 
 function createEntry(entry) {
