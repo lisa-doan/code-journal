@@ -67,12 +67,23 @@ window.addEventListener('DOMContentLoaded', function (event) {
   }
 });
 
-$navEntries.addEventListener('click', function (event) {
+function viewEntries(event) {
   $entryForm.className = 'entry-form hidden';
   $entries.className = 'entries display';
-});
+  data.view = 'entries';
+}
 
-$newEntryBtn.addEventListener('click', function (event) {
+function viewForm(event) {
   $entryForm.className = 'entry-form display';
   $entries.className = 'entries hidden';
-});
+  data.view = 'entry-form';
+}
+
+$newEntryBtn.addEventListener('click', viewForm);
+$navEntries.addEventListener('click', viewEntries);
+
+if (data.view === 'entry-form') {
+  viewForm();
+} else if (data.view === 'entries') {
+  viewEntries();
+}
