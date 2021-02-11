@@ -4,6 +4,10 @@ var $photoUrl = document.querySelector('#photoUrl');
 var $form = document.querySelector('form');
 var $imgHolder = document.querySelector('.image');
 var $entriesList = document.querySelector('.entries-list');
+var $navEntries = document.querySelector('.nav-entries');
+var $entryForm = document.querySelector('.entry-form');
+var $entries = document.querySelector('.entries');
+var $newEntryBtn = document.querySelector('.new-entry-btn');
 
 $photoUrl.addEventListener('input', function (event) {
   $imgHolder.setAttribute('src', event.target.value);
@@ -46,7 +50,6 @@ function createEntry(entry) {
   $entryTitle.textContent = entry.title;
   var $entryNotes = document.createElement('p');
   $entryNotes.textContent = entry.notes;
-
   $columnHalfRight.appendChild($entryTitle);
   $columnHalfRight.appendChild($entryNotes);
 
@@ -58,4 +61,14 @@ window.addEventListener('DOMContentLoaded', function (event) {
     var entry = createEntry(data.entries[i]);
     $entriesList.appendChild(entry);
   }
+});
+
+$navEntries.addEventListener('click', function (event) {
+  $entryForm.className = 'entry-form hidden';
+  $entries.className = 'entries display';
+});
+
+$newEntryBtn.addEventListener('click', function (event) {
+  $entryForm.className = 'entry-form display';
+  $entries.className = 'entries hidden';
 });
