@@ -16,10 +16,18 @@ h1 {
   letter-spacing: 1px;
 }
 
-.head-container {
+.nav-container {
   width: 900px;
   margin: 0 auto;
   padding: 0 1.5rem;
+}
+
+a {
+  color: white;
+  font-size: 14px;
+  text-decoration: none;
+  padding: 10px;
+  cursor: pointer;
 }
 
 img {
@@ -59,4 +67,23 @@ textarea {
   padding: 0.5rem 1.5rem;
   border: 3px solid black;
   box-shadow: 3px 3px 2px black;
+  cursor: pointer;
+}
+
+.new-entry-btn {
+  padding: 0.25rem 0.5rem;
+  border: 2px solid black;
+  box-shadow: 2px 2px 1px black;
+  height: 30px;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+.row-entries {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
