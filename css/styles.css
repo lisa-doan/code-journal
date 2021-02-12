@@ -87,3 +87,9 @@ ul {
   justify-content: space-between;
   align-items: center;
 }
+
+.title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
