@@ -50,11 +50,21 @@ function createEntry(entry) {
   $columnHalfRight.setAttribute('class', 'column-half');
   $row.append($columnHalfRight);
 
+  var $titleContainer = document.createElement('div');
+  $titleContainer.setAttribute('class', 'title-container');
+  $columnHalfRight.appendChild($titleContainer);
+
   var $entryTitle = document.createElement('h2');
   $entryTitle.textContent = entry.title;
+  $titleContainer.appendChild($entryTitle);
+
+  var $editIcon = document.createElement('i');
+  $editIcon.className = 'fas fa-pencil-alt';
+  $titleContainer.appendChild($editIcon);
+
   var $entryNotes = document.createElement('p');
   $entryNotes.textContent = entry.notes;
-  $columnHalfRight.appendChild($entryTitle);
+
   $columnHalfRight.appendChild($entryNotes);
 
   return $li;
