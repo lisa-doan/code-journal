@@ -25,7 +25,7 @@
   <main>
     <div class="container">
       <div class="entry-form display" data-view="entry-form">
-        <h1>New Entry</h1>
+        <h1 class="form-title">New Entry</h1>
         <form>
           <div class="row">
             <div class="column-half">
@@ -35,14 +35,14 @@
             </div>
             <div class="column-half">
               <label for="photoUrl"><p>Image URL</p></label>
-              <input type="text" name="photoUrl" id="photoUrl" required>
+              <input type="text" name="photoUrl" id="photoUrl" class="input-photoUrl" required>
               <label for="title"><p>Title</p></label>
-              <input type="text" name="title" id="title" required>
+              <input type="text" name="title" id="title" class="input-title" required>
             </div>
           </div>
           <div class="column-full">
             <label for="notes"><p>Notes</p></label>
-            <textarea name="notes" id="notes" required></textarea>
+            <textarea name="notes" id="notes" class ="input-notes" required></textarea>
           </div>
           <div class="btn-container">
             <button class="save-btn" id="save-id" type="submit">SAVE</button>
