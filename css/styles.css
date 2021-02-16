@@ -22,7 +22,7 @@ h1 {
   padding: 0 1.5rem;
 }
 
-a {
+.nav-entries {
   color: white;
   font-size: 14px;
   text-decoration: none;
@@ -59,8 +59,11 @@ textarea {
 
 .btn-container {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
   padding: 1rem;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .save-btn {
