@@ -45,6 +45,7 @@
             <textarea name="notes" id="notes" class ="input-notes" required></textarea>
           </div>
           <div class="btn-container">
+            <a class="delete-entry">Delete</a>
             <button class="save-btn" id="save-id" type="submit">SAVE</button>
           </div>
         </form>
@@ -60,6 +61,18 @@
         </ul>
        </div>
     </div>
+
+    <div class="modal-container hidden">
+      <div class="modal-content">
+        <p>Are you sure you want to delete this entry?</p>
+
+      <div class="btn-container">
+        <button class="cancel-btn" id="cancel-id" type="submit">CANCEL</button>
+        <button class="delete-btn" id="delete-id" type="submit">DELETE</button>
+      </div>
+      </div>
+    </div>
+
   </main>
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>
